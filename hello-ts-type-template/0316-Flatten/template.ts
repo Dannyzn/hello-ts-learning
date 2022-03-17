@@ -1,4 +1,6 @@
-type Flatten = any
+type Flatten<T> = T extends [infer First, ...infer Rest]
+    ? [...Flatten<First>, ...Flatten<Rest>]
+    : T extends [] ? T : [T] 
 
 
 // es  flat 
