@@ -24,8 +24,8 @@ type AppendToObject<T extends Record<string, unknown>, U extends string, V exten
 // key
 // keyof
 // 联合类型  T | U
-[K in keyof T | U]
+// [K in keyof T | U]
 
 // value
 // K 是否是 U 返回 V ---->  key extends home ? bealean : test1[key]
-K extends U ? V : T[K]
+// K extends U ? V : T[K]
